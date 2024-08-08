@@ -14,7 +14,7 @@ class TaskModelTest(TestCase):
     def test_index_view(self):
         response = self.client.get('/')
         self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, 'tasks/index.html')
+        self.assertTemplateUsed(response, 'index.html')
 
     def test_add_task_view(self):
         response = self.client.post('/add/', {'title': 'New Task'})
